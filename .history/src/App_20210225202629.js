@@ -1,0 +1,30 @@
+import React from "react";
+//import logo from "./logo.svg";
+import abAnarContext from "./context.js";
+//import ReactContext from "./ReactContext";
+
+function App() {
+  return (
+    <abAnarContext.Provider value={{ name: "sosis bandar", age: 12 }}>
+      <ReactContext />
+    </abAnarContext.Provider>
+  );
+}
+function ReactContext() {
+  return (
+    <div>
+      <MiveJat />
+    </div>
+  );
+}
+function MiveJat() {
+  const consumer = React.useContext(abAnarContext);
+  return (
+    <div>
+      {consumer.name}
+      {consumer.name}
+    </div>
+  );
+}
+
+export default App;
